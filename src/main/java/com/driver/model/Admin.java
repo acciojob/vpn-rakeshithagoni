@@ -8,13 +8,16 @@ import java.util.List;
 @Table(name = "admin")
 @Entity
 public class Admin {
+
+    //primary key of admin
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+
     private String username;
     private String password;
-    g
+
 
     @OneToMany(mappedBy = "serviceProvider", cascade = CascadeType.ALL)
     private List<ServiceProvider> serviceProviderList = new ArrayList<>();

@@ -2,13 +2,14 @@
 package com.driver.model;
 
 import javax.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "serviceprovider")
 public class ServiceProvider {
-
+//primary key
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -24,7 +25,8 @@ public class ServiceProvider {
     @OneToMany(mappedBy = "serviceProvider" , cascade = CascadeType.ALL)
     private List<Country> countryList = new ArrayList<>();
 
-    //parent of connection
+
+    //parent s connection
     @OneToMany(mappedBy = "serviceProvider", cascade = CascadeType.ALL)
     private List<Connection> connectionList = new ArrayList<>();
 
@@ -85,6 +87,7 @@ public class ServiceProvider {
     }
 
     public List<User> getUsers() {
+
         return users;
     }
 

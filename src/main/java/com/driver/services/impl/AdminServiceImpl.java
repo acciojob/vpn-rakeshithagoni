@@ -33,6 +33,7 @@ public class AdminServiceImpl implements AdminService {
         return admin;
     }
 
+
     @Override
     public Admin addServiceProvider(int adminId, String providerName) {
         Admin admin = adminRepository1.findById(adminId).get();
@@ -55,6 +56,7 @@ public class AdminServiceImpl implements AdminService {
 
         return admin;
     }
+
 
     @Override
     public ServiceProvider addCountry(int serviceProviderId, String countryName) throws Exception{
