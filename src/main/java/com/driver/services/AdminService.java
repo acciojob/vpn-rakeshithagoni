@@ -1,16 +1,14 @@
 
 package com.driver.services;
 
-import com.driver.model.Admin;
+import com.driver.model.*;
 import com.driver.model.ServiceProvider;
 
-public interface AdminService{
+public interface AdminService {
 
-    Admin register(String username, String password) throws Exception;
+    public Admin register(String username, String password) ;
 
+    public Admin addServiceProvider(int adminId, String providerName) ;
 
-    Admin addServiceProvider(int adminId, String providerName) throws Exception;
-
-
-    ServiceProvider addCountry(int serviceProviderId, String countryName) throws Exception;
+    public ServiceProvider addCountry(int serviceProviderId, String countryName) throws Exception;
 }
